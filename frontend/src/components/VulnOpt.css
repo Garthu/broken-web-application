@@ -1,0 +1,81 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+}
+
+.section {
+    height: 100vh;
+    padding-top: 80px; /* Ajuste para evitar que a seção seja escondida pelo cabeçalho */
+}
+
+.section.active {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 1000;
+    /* Estilos adicionais aqui */
+  }
+
+.imgs {
+    height: 120px;
+}
+
+#content {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  display: table;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-top: 40px;
+}
+
+.box {
+  background-color: transparent;
+  border-radius: 2px;
+  border: 2px solid #737373;
+  text-align: left;
+  padding: 35px 20px 35px 20px;
+  width: 328px;
+  height: 139px;
+  }
+
+.box img {
+  float: left;
+  padding: 35px 30px 35px 20px;
+  margin-top: -30px;
+}
+
+.box h2 {
+  color: white;
+  font-size: 1.2em;
+  margin: 0 0 10px;
+}
+
+.box p {
+  font-size: 1em;
+  margin: 0;
+}
