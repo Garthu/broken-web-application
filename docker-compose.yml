@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  bwa-api:
+    build: ./bwa-api
+    restart: unless-stopped
+    env_file: ./.env
+    ports:
+      - $NODE_LOCAL_PORT:$NODE_DOCKER_PORT
+    environment:
+      - CLIENT_ORIGIN=$CLIENT_ORIGIN
+    networks:
+      - backend
+      - frontend
+
+  bwa-ui:
+    depends_on:
+      - bwa-api
+    build:
+      context: ./bwa-ui
+      args:
+        - REACT_APP_API_BASE_URL=$CLIENT_API_BASE_URL
+    ports:
+      - $REACT_LOCAL_PORT:$REACT_DOCKER_PORT
+    networks:
+      - frontend
+
+networks:
+  backend:
+  frontend:

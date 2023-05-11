@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { smoothScroll}  from '../scroll'
-import XSSContent from './XSSContent';
+import XSSContent from './content/XSSContent';
 import Header from './Header';
 import './VulnOpt.css'
 
@@ -17,7 +17,7 @@ class VulnOpt extends Component {
                 <header id="main-header">
                   <Header/>
                 </header>
-                <div class="section">
+                <div class="section" id="start-section">
                   <div id="content">
                     <h1>XSS Tipo de vulnerabilidade</h1>
                     <p>Essa vulnerabilidade consiste em X Y Z</p>

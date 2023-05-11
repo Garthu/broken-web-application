@@ -1,4 +1,4 @@
-function smoothScroll(sections, currentSectionIndex) {
+/*function smoothScroll(sections, currentSectionIndex) {
     window.addEventListener('wheel', function(event) {
       if (event.deltaY > 0) {
         // encontra a próxima seção
@@ -17,7 +17,7 @@ function smoothScroll(sections, currentSectionIndex) {
   
         // se houver uma seção anterior, rola até ela
         if (prevSection !== undefined) {
-          prevSection.scrollIntoView({ behavior: 'smooth' });
+          prevSection.scrollIntoView();
           currentSectionIndex = prevSectionIndex;
         }
       }
@@ -25,4 +25,24 @@ function smoothScroll(sections, currentSectionIndex) {
   }
   
   export { smoothScroll };
-  
+*/
+
+function smoothScroll() {
+  window.addEventListener('wheel', function(event) {
+    if (event.deltaY > 0) {
+      // rola suavemente para baixo
+      window.scrollBy({
+        top: window.innerHeight,
+        behavior: 'smooth'
+      });
+    } else if (event.deltaY < 0) {
+      // rola suavemente para cima
+      window.scrollBy({
+        top: -window.innerHeight,
+        behavior: 'smooth'
+      });
+    }
+  });
+}
+
+export { smoothScroll };

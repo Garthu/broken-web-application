@@ -28,7 +28,7 @@ const XSSContent = () => {
           <h2>Título 5</h2>
           <p>Descrição curta 5</p>
         </div>
-        <a href='/pagina1'>
+        <a href='/xss'>
           <div class="box">
             <img class='imgs' src="https://cdn-icons-png.flaticon.com/512/1224/1224811.png" alt="ícone"/>
             <h2>Título 6</h2>
