@@ -23,7 +23,7 @@ const XSSContent = () => {
           <h2>Título 4</h2>
           <p>Descrição curta 4</p>
         </div>
-        <div class="box">
+        <div class="/relative">
           <img class='imgs' src="https://cdn-icons-png.flaticon.com/512/1224/1224811.png" alt="ícone"/>
           <h2>Título 5</h2>
           <p>Descrição curta 5</p>
