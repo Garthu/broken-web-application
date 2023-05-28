@@ -5,7 +5,7 @@ body {
 
 .section {
     height: 100vh;
-    padding-top: 80px; /* Ajuste para evitar que a seção seja escondida pelo cabeçalho */
+    padding-top: 80px;
 }
 
 .section.active {
@@ -23,7 +23,6 @@ a {
     right: 0;
     height: 80px;
     z-index: 1000;
-    /* Estilos adicionais aqui */
   }
 
 .imgs {
@@ -45,8 +44,16 @@ a {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  margin-top: 40px;
+  grid-gap: 15px;
+  margin-top: 10px;
+}
+
+.grid-two {
+  justify-content: center;
+  display: flex;
+  grid-template-columns: repeat(2, 0fr);
+  grid-gap: 15px;
+  margin-top: 20px;
 }
 
 .box {

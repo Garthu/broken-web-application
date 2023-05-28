@@ -1,7 +1,9 @@
 require('dotenv').config()
+
 const express = require('express')
 const cors = require('cors')
-
+const { db } = require('./app/models/index')
+const migration = require('./app/models/migration')
 const app = express()
 
 var corsOptions = {
@@ -17,6 +19,8 @@ app.get("/", (req, res) => {
 })
 
 require('./app/routes/routes')(app)
+
+migration(db)
 
 const PORT = process.env.NODE_DOCKER_PORT || 8080
 app.listen(PORT, () => {

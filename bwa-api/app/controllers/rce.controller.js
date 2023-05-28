@@ -1,12 +1,9 @@
-const fs = require('fs');
-const path = require('path');
+const path = require('path')
 
 exports.dns = (req, res) => {
   const filename = req.query.filename
-  console.log(filename)
   const filePath = path.resolve(__dirname, '../../img/result.txt')
   const command = `result=$(dig ${filename}) && echo "$result" > '/bwa-api/img/result.txt'`
-  console.log(command)
 
   require('child_process').exec(command, (err, stdout, stderr) => {
     res.setHeader('Content-Disposition', `attachment; filename=result.txt`)

@@ -10,9 +10,9 @@ class Relative extends Component {
   }
 
   componentDidMount() {
-      let currentIndex = 0;
-      var currentSection = document.querySelectorAll('.section');
-      smoothScroll(currentSection, currentIndex);
+    let currentIndex = 0;
+    var currentSection = document.querySelectorAll('.section');
+    smoothScroll(currentSection, currentIndex);
   }
 
   sendData = () => {
@@ -27,19 +27,13 @@ class Relative extends Component {
         if (headers.hasOwnProperty('content-disposition')) {
           const disposition = headers['content-disposition'];
           const fileNameMatch = disposition.match(/filename=(?:"([^"]+)"|([^;\n]+))/i);
-          let fileName = 'download.txt';
-    
-          if (fileNameMatch && fileNameMatch.length > 1) {
-            fileName = fileNameMatch[1] || fileNameMatch[2];
-          }
-    
-          const extension = fileName.split('.').pop().toLowerCase();
+ 
+          const fileName = fileNameMatch[1] || fileNameMatch[2]
     
           const blob = new Blob([data], { type: headers['content-type'] });
     
           const url = window.URL.createObjectURL(blob);
           
-
           const link = document.createElement('a');
           link.href = url;
           link.download = fileName;
@@ -58,34 +52,37 @@ class Relative extends Component {
 
   render () {
     return (
-        <body>
-            <header id="main-header">
-              <BaseHeader/>
-            </header>
-            <div class="section" id="start-section">
-              <div id="content">
-                <h1>CVE23</h1>
-                <p>Essa vulnerabilidade </p>
-              </div>
-              <div class='input-box'>
-                <input id='my-input' ref={this.inputReference} type='text' placeholder='Digite aqui'/>
-                <button class='send-button' onClick={this.sendData}>Enviar</button>
-              </div>
+      <body>
+        <header id="main-header">
+          <BaseHeader/>
+        </header>
+        <div class="section" id="start-section">
+          <div id="content">
+            <h1>Descrição de animais - Escolha um:</h1>
+            <p>
+              abelha.txt<br/>
+              besouro.txt<br/>
+              gafanhoto.txt<br/>
+              joaninha.txt<br/>
+            </p>
+            <div class='input-box'>
+              <input id='my-input' ref={this.inputReference} type='text' placeholder='Digite aqui'/>
+              <button class='send-button' onClick={this.sendData}>Enviar</button>
             </div>
-            <div class="section">
-              <div id="content">
-                  <div class="center">
-                    <h1>Exploração</h1>
-                    <p>
-                      Você pode explorar isso seguindo os seguintes passos<br/>
-                      1. Faça X<br/>
-                      2. Faça Y
-                      3. ../../../../etc/passwd
-                    </p>
-                  </div>
-              </div>
+          </div>
+        </div>
+        <div class="section">
+          <div id="content">
+            <div class="center">
+              <h1>Exploração</h1>
+              <p>
+                Muitas vezes entradas de dados em sites não são sanitizadas<br/>
+                deve valer a pena testar algum Injection
+              </p>
             </div>
-        </body>
+          </div>
+        </div>
+      </body>
     ) 
   }
 }
