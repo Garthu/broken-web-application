@@ -7,9 +7,9 @@ import './VulnOpt.css'
 
 class VulnOpt extends Component {
   componentDidMount() {
-      let currentIndex = 0;
-      var currentSection = document.querySelectorAll('.section');
-      smoothScroll(currentSection, currentIndex);
+    let currentIndex = 0;
+    var currentSection = document.querySelectorAll('.section');
+    smoothScroll(currentSection, currentIndex);
   }
 
   render () {

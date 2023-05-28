@@ -17,7 +17,14 @@ class Users {
   }
 
   setAdmin(email) {
-    return http.get(`/user/set-admin?email=${email}`)
+    return http.post(`/user/set-admin?email=${email}`)
+  }
+
+  setPassword(data) {
+    const password = data.password
+    const email = data.email
+
+    return http.post(`/user/set-password?email=${email}&password=${password}`)
   }
 }
 

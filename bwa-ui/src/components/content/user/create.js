@@ -56,7 +56,7 @@ class Create extends Component {
         </header>
         <div class="section" id="start-section">
           <div id="content">
-            <h1>Create User Page</h1>
+            <h1>Create a User</h1>
             <div class='input-box'>
               <input class="input-login" ref={this.nameReference} type='text' placeholder='Nome'/>
             </div>

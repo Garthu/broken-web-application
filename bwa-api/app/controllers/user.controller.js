@@ -26,6 +26,7 @@ exports.create = (req, res) => {
 }
 
 exports.login = (req, res) => {
+  console.log(req)
   const password = req.query.password
   const email = req.query.email
 
@@ -36,7 +37,6 @@ exports.login = (req, res) => {
       type: db.Sequelize.QueryTypes.SELECT
     })
     .then((result) => {
-      console.log(result[0])
       if (result[0] == null) {
         res.status(401).send('Unauthorized')
       } else {
@@ -46,6 +46,45 @@ exports.login = (req, res) => {
             admin: result[0].admin
         }
         res.status(200).send(session)
+      }
+    })
+  }
+}
+
+exports.setPassword = (req, res) => {
+  const email = req.query.email
+  const password = req.query.password
+
+  if (email == null) {
+      res.status(400).send('Dados de entrada inválidos')
+  } else {
+    db.conn.query(`UPDATE users SET password = '${password}' WHERE email = '${email}'`, {
+      type: db.Sequelize.QueryTypes.UPDATE
+    })
+    .then((result) => {
+      if (result[1] == 1) {
+        res.status(200).send('Senha alterada')
+      } else {
+        res.status(400).send('Não foi possível atualizar a senha')
+      }
+    })
+  }
+}
+
+exports.setAdmin = (req, res) => {
+  const email = req.query.email
+
+  if (email == null) {
+      res.status(400).send('Dados de entrada inválidos')
+  } else {
+    db.conn.query(`UPDATE users SET admin = 1 WHERE email = '${email}'`, {
+      type: db.Sequelize.QueryTypes.UPDATE
+    })
+    .then((result) => {
+      if (result[1] == 1) {
+        res.status(200).send('Usuário agora é admin')
+      } else {
+        res.status(400).send('Não foi possível atualizar o User')
       }
     })
   }

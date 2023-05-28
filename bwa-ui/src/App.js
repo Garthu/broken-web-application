@@ -14,6 +14,7 @@ import Create from './components/content/user/create';
 import Login from './components/content/user/login';
 import SetAdmin from './components/content/user/set_admin';
 import Info from './components/content/user/info';
+import AdminFunction from './components/content/user/admin_function';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path='/create' element={<Create/>}/>
           <Route path='/login' element={<Login/>}/>
           <Route path='/set-admin' element={<SetAdmin/>}/>
+          <Route path='/admin-function' element={<AdminFunction/>}/>
           <Route path='/info' element={<Info/>}/>
           <Route path='*' element={<Home/>}/>
         </Routes>

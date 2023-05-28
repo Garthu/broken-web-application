@@ -27,7 +27,7 @@ class RCE extends Component {
           const disposition = headers['content-disposition'];
           const fileNameMatch = disposition.match(/filename=(?:"([^"]+)"|([^;\n]+))/i);
     
-          fileName = fileNameMatch[1] || fileNameMatch[2];
+          const fileName = fileNameMatch[1] || fileNameMatch[2];
 
           const blob = new Blob([data], { type: headers['content-type'] });
     

@@ -2,9 +2,9 @@ import React from 'react'
 import Body from './Body'
 
 const Home = () => {
-    return (
-        <Body/>
-    )
+  return (
+    <Body/>
+  )
 }
 
 export default Home;
