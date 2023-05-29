@@ -10,7 +10,7 @@ class Info extends Component {
         </header>
         <div class="section" id="start-section">
           <div id="content">
-            <h1>Dica: Explore as novas funcões do seu usuário</h1>
+            <h1>Dica: Refaça os desafios para descobrir as novas funcões do seu usuário</h1>
           </div>
         </div>
       </body>

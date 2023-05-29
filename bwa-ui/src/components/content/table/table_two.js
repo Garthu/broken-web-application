@@ -38,7 +38,7 @@ const TableTwo = () => {
           <div class="box">
             <img class='imgs' src="https://cdn-icons-png.flaticon.com/512/1224/1224811.png" alt="ícone"/>
             <h2>CWE-94</h2>
-            <p>Code Injectio</p>
+            <p>Code Injection</p>
           </div>
         </a>
       </div>

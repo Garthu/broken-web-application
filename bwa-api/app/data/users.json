@@ -1,6 +1,12 @@
 {
     "users": [
         {
+            "name": "jerimundo",
+            "password": "jerimundo",
+            "email": "jerimundo@bwa.com",
+            "admin": 0
+        },
+        {
             "name": "admin",
             "password": "admin",
             "email": "admin@bwa.com",
@@ -11,12 +17,6 @@
             "password": "hacking",
             "email": "hacking@bwa.com",
             "admin": 1
-        },
-        {
-            "name": "jerimundo",
-            "password": "jerimundo",
-            "email": "jerimundo@bwa.com",
-            "admin": 0
         }
     ]
 }
