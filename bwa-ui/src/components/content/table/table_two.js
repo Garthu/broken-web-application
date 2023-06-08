@@ -21,7 +21,7 @@ const TableTwo = () => {
         <a href='/info'>
           <div class="box">
             <img class='imgs' src="https://cdn-icons-png.flaticon.com/512/1224/1224811.png" alt="ícone"/>
-            <h2>CWE-862</h2>
+            <h2>CWE-285</h2>
             <p>Missing Authorization</p>
           </div>
         </a>

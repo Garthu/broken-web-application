@@ -69,7 +69,8 @@ class RCE extends Component {
             <div class="center">
               <h1>Explordação</h1>
               <p>
-                Este site é um vetor de Injection
+                Muitas vezes entradas de dados em sites não são sanitizadas<br/>
+                tente uma Remote Code Execution
               </p>
             </div>
           </div>

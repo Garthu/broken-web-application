@@ -51,7 +51,7 @@ class XSS extends Component {
               <h1>Exploração</h1>
               <p>
                 Muitas vezes entradas de dados em sites não são sanitizadas<br/>
-                deve valer a pena testar algum Injection
+                tente um XSS Injection
               </p>
             </div>
           </div>
