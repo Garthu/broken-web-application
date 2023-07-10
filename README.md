@@ -1,6 +1,8 @@
 A01:2021 - Broken Access Control
+
     CWE-284: Improper Access Control - Nível de criticidade: média
     CWE-285: Improper Authorization - Nível de criticidade: alta
+    
 A02:2021 - Cryptographic Failures
     CWE-200: Exposure of Sensitive Information to an Unauthorized Actor - Nível de criticidade: alta
 A03:2021 - Injection
